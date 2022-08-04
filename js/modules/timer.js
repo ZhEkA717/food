@@ -1,7 +1,5 @@
-function timer() {
+function timer(id,deadline) {
     // timer (the end of stock)
-
-    const deadline = '2022-08-05';
 
     function getTimeRemaining(endtime) {
         const total = Date.parse(endtime) - Date.parse(new Date()),
@@ -62,8 +60,8 @@ function timer() {
 
     }
 
-    setClock('.timer', deadline);
+    setClock(id, deadline);
 
 }
 
-module.exports = timer;
+export default timer;
